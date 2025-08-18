@@ -45,3 +45,8 @@
     padding: 10px;
     font-size: 14px;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
