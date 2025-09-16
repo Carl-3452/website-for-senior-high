@@ -4,6 +4,7 @@
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
+    "body body"
     "navbar navbar"
     "heading_1 heading_1"
     "img_2 text_1"
@@ -12,6 +13,13 @@
     "footer footer";
     gap: 10px;
 }
+
+ body{ 
+            background-image: url(kids.jpg);
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+          }
 
 .navbar {
     grid-area: navbar;
