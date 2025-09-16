@@ -1,25 +1,27 @@
+.body{ 
+    background-color: rgb(152, 199, 240);
+    background-image: url(kids.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
 .container {
     display: grid;
     height: 100vh;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: 
-    "body body"
-    "navbar navbar"
-    "heading_1 heading_1"
-    "img_2 text_1"
-    "img_3 text_2"
-    "img_4 text_3"
-    "footer footer";
+    "navbar navbar navbar"
+    "heading_1 heading_1 heading_1"
+    "img_2 text_1 img_1"
+    "img_3 text_2 img_1"
+    "img_4 text_3 img_1"
+    "footer footer footer";
     gap: 10px;
 }
-
- body{ 
-            background-image: url(kids.jpg);
-            height: 100vh;
-            background-size: cover;
-            background-position: center;
-          }
 
 .navbar {
     grid-area: navbar;
@@ -34,15 +36,6 @@
     font-weight: bold;
     text-align: center;
 }
- <!DOCTYPE html>
-<html>
-<head>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-    }
 
     nav {
       background-color: #333;
@@ -61,14 +54,43 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       border-radius: 8px;
     }
-  </style>
-</head>
-<body>
 
-.text_2, .text_3, .text_4 {
+.text_1 {
+    grid-area: text_1;
     padding: 10px;
     font-size: 16px;
 }
+
+.text_2 {
+    grid-area: text_2;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.text_3 {
+    grid-area: text_3;
+    padding: 10px;
+    font-size: 16px;
+}
+
+
+.img_2{
+    grid-area: img_2;
+    width: 100%;
+    height: auto;   
+}
+.img_3{
+    grid-area: img_3;
+    width: 100%;
+    height: auto;   
+}
+
+.img_4{
+    grid-area: img_4;
+    width: 100%;
+    height: auto;   
+}   
+
 
 .footer {
     grid-area: footer;
