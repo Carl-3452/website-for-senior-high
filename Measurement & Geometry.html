@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MathMastersDHS.com - Measurement & Geometry Quiz</title>
+  
+
+  <link rel="stylesheet" href="quiz.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+<div class="container">
+    
+     <div class="navbar">
+          <h2>MathMastersDHS.com</h2>
+          <nav>
+                 <a href="index.html">Home</a>
+                 <a href="About.html">About</a>
+                 <a href="#">Courses</a>
+                 <a href="#">Contact</a>
+                 
+                 <div class="dropdown">
+                      <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                         Quiz-Section <i class="fa fa-caret-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="dropdown-content" role="menu" aria-label="Quiz sections">
+                         <a href="Measurement & Geometry.html">Measurement & Geometry</a>
+                         <a href="probability.html">Probability</a>
+                         <a href="diophantine.html">Diophantine</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="heading_1">
+            <h1>Measurement & Geometry Quiz</h1>
+        </div>
+
+
+        <div class="text_1">
+           <section class="quiz-section">
+           <h1>Measurement & Geometry Equations Quiz</h1>
+           <form id="quizForm">
+                <div class="question">
+                 <h3>1. What is the area of a rectangle with length 8 cm and width 5 cm?</h3>
+                 <input type="text" id="q1" placeholder="Enter numeric answer" />
+                 <div id="feedback1" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>2. How many degrees are there in a right angle?</h3>
+                 <input type="text" id="q2" />
+                 <div id="feedback2" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>3. What is the perimeter of a square with side 6 cm?</h3>
+                 <input type="text" id="q3" />
+                 <div id="feedback3" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>4. What is the volume of a cube with side 4 cm?</h3>
+                 <input type="text" id="q4" />
+                 <div id="feedback4" class="feedback">
+                </div>
+ 
+                <div class="question">
+                 <h3>5. How many sides does a hexagon have?</h3>
+                 <input type="text" id="q5" />
+                 <div id="feedback5" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>6. What is the circumference of a circle with diameter 14 cm? (Use π = 3.14)</h3>
+                 <input type="text" id="q6" />
+                 <div id="feedback6" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>7. Convert 2.5 meters to centimeters.</h3>
+                 <input type="text" id="q7" />
+                 <div id="feedback7" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>8. A triangle has sides 3 cm, 4 cm, and 5 cm. What type of triangle is it?</h3>
+                 <input type="text" id="q8" />
+                 <div id="feedback8" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>9. What is the formula for the area of a triangle? (use base and height)</h3>
+                 <input type="text" id="q9" placeholder="write formula" />
+                 <div id="feedback9" class="feedback"></div>
+                </div>
+
+                <div class="question">
+                 <h3>10. A circle has a radius of 7 cm. What is its area? (Use π = 3.14)</h3>
+                 <input type="text" id="q10" placeholder="numeric" />
+                 <div id="feedback10" class="feedback"></div>
+                </div>
+
+
+                   <button type="submit">Submit Answers</button>
+                </form>
+                <div id="result"></div>
+                </section>
+            </div>
+
+         <div class="footer">Footer</div>
+  </div>
+
+<script>
+
+document.addEventListener('click', function(e) {
+  const btn = e.target.closest('.dropbtn');
+  if (btn) {
+      const dropdown = btn.parentElement;
+      const expanded = dropdown.classList.toggle('open');
+      btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      return;
+  }
+
+ document.querySelectorAll('.dropdown.open').forEach(dd => {
+      dd.classList.remove('open');
+      const b = dd.querySelector('.dropbtn');
+      if (b) b.setAttribute('aria-expanded', 'false');
+       });
+});
+
+document.getElementById('quizForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+         
+         const answer = {
+           q1: 40,
+           q2: 90,
+           q3: 24,
+           q4: 64,
+           q5: '6',
+           q6: 43.96,
+           q7: 250,
+           q8: 'right',
+           q9: '1/2 × base × height',
+           q10: 153.86
+        };
+    
+        let score = 0;
+        const total = 10;
+
+        function setFeedback(id, ok, msg) {
+          const el = document.getElementById(id);
+          el.textContent = msg;
+          el.className = 'feedback ' + (ok ? 'correct' : 'incorrect');
+          if (ok) score++;
+
+
+  }
+
+  function isNumericMatch(input, expected, tol = 0.1) {
+    const v = parseFloat(String(input).replace(/[^\d.\-]/g, ''));
+    if (isNaN(v)) return false;
+    return Math.abs(v - expected) <= tol;
+  }
+
+  const q = id => document.getElementById(id).value.trim();
+
+  if (isNumericMatch(q('q1'), 40)) setFeedback('feedback1', true, 'Correct!');
+  else setFeedback('feedback1', false,);
+
+  if (isNumericMatch(q('q2'), 90)) setFeedback('feedback2', true, 'Correct!');
+  else setFeedback('feedback2', false, );
+
+  if (isNumericMatch(q('q3'), 24)) setFeedback('feedback3', true, 'Correct!');
+  else setFeedback('feedback3', false, );
+
+  if (isNumericMatch(q('q4'), 64)) setFeedback('feedback4', true, 'Correct!');
+  else setFeedback('feedback4', false,);
+
+  const a5 = q('q5').toLowerCase();
+  if (a5 === '6' || a5.includes('six')) setFeedback('feedback5', true, 'Correct!');
+  else setFeedback('feedback5', false, );
+
+  if (isNumericMatch(q('q6'), 43.96, 0.2)) setFeedback('feedback6', true, 'Correct!');
+  else setFeedback('feedback6', false,);
+
+  if (isNumericMatch(q('q7'), 250)) setFeedback('feedback7', true, 'Correct!');
+  else setFeedback('feedback7', false,);
+
+  if (q('q8').toLowerCase().includes('right')) setFeedback('feedback8', true, 'Correct!');
+  else setFeedback('feedback8', false, );
+
+  const a9 = q('q9').toLowerCase();
+  if (a9.includes('1/2') || a9.includes('0.5') || (a9.includes('base') && a9.includes('height')))
+    setFeedback('feedback9', true, 'Correct!');
+  else setFeedback('feedback9', false, );
+
+  if (isNumericMatch(q('q10'), 153.86, 0.3)) setFeedback('feedback10', true, 'Correct!');
+  else setFeedback('feedback10', false, );
+
+  const resultDiv = document.getElementById("result");
+    resultDiv.textContent = `Your score: ${score} out of ${total}.`;
+    if (score === total) {
+    resultDiv.style.color = "green";
+    resultDiv.textContent += " Excellent! You know your Probability equations well.";
+    } else if (score >= total / 2) {
+    resultDiv.style.color = "orange";
+    resultDiv.textContent += " Good job! Keep practicing.";
+    } else {
+    resultDiv.style.color = "red";
+    resultDiv.textContent += " Keep studying! Probability equations can be tricky.";
+    }
+});
+
+/* Disable radio inputs after selection (as you had) */
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const name = this.name;
+        document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.disabled = true);
+    });
+});
+
+/* Disable text and number inputs after first answer (on blur) */
+['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'].forEach(id => {
+    const input = document.getElementById(id);
+    if (input) {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() !== '') {
+                this.disabled = true;
+            }
+        });
+    }
+});
+        
+</script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>MathMastersDHS.com - Probability Quiz</title>
+
+
+  <link rel="stylesheet" href="quiz.css" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+    
+<div class="container">
+
+    <div class="navbar">
+       <h2>MathMastersDHS.com</h2>
+       <nav>
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="#">Courses</a>
+            <a href="#">Contact</a>
+
+            <div class="dropdown">
+                <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+                   Quiz-Section <i class="fa fa-caret-down" aria-hidden="true"></i>
+                </button>
+                <div class="dropdown-content" role="menu" aria-label="Quiz sections">
+                    <a href="Measurement & Geometry.html">Measurement & Geometry</a>
+                    <a href="Probability.html">Probability</a>
+                    <a href="Diophantine.html">Diophantine</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="heading_1">
+        <h1>Probability Quiz</h1>
+    </div>
+
+    <div class="text_1">
+      <section class="quiz-section">
+      <h1>Probability Equations Quiz</h1>
+      <form id="quizForm">
+          <div class="question">
+            <h3>1. What is the probability of getting a head when flipping a fair coin?</h3>
+            <label><input type="radio" name="q1" value="A"> A) 0</label>
+            <label><input type="radio" name="q1" value="B"> B) 1/4</label>
+            <label><input type="radio" name="q1" value="C"> C) 1/2</label>
+            <label><input type="radio" name="q1" value="D"> D) 1</label>
+            <div id="feedback1" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>2. A bag contains 3 red and 2 blue balls. What is the probability of picking a blue ball?</h3>
+            <label><input type="radio" name="q2" value="A"> A) 3/5</label>
+            <label><input type="radio" name="q2" value="B"> B) 2/5</label>
+            <label><input type="radio" name="q2" value="C"> C) 1/2</label>
+            <label><input type="radio" name="q2" value="D"> D) 1/3</label>
+            <div id="feedback2" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>3. A die is rolled once. What is the probability of getting a number greater than 4?</h3>
+            <label><input type="radio" name="q3" value="A"> A) 1/2</label>
+            <label><input type="radio" name="q3" value="B"> B) 1/6</label>
+            <label><input type="radio" name="q3" value="C"> C) 1/3</label>
+            <label><input type="radio" name="q3" value="D"> D) 2/3</label>
+            <div id="feedback3" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>4. What is the probability of drawing a king from a standard deck of 52 cards?</h3>
+            <label><input type="radio" name="q4" value="A"> A) 1/13</label>
+            <label><input type="radio" name="q4" value="B"> B) 1/52</label>
+            <label><input type="radio" name="q4" value="C"> C) 1/26</label>
+            <label><input type="radio" name="q4" value="D"> D) 1/4</label>
+            <div id="feedback4" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>5. If you toss two coins, what is the probability of getting exactly one head?</h3>
+            <label><input type="radio" name="q5" value="A"> A) 1/3</label>
+            <label><input type="radio" name="q5" value="B"> B) 1/4</label>
+            <label><input type="radio" name="q5" value="C"> C) 3/4</label>
+            <label><input type="radio" name="q5" value="D"> D) 1/2</label>
+            <div id="feedback5" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>6. A spinner has 8 equal sections numbered 1-8. What is the probability of landing on an even number?</h3>
+            <label><input type="radio" name="q6" value="A"> A) 1/4</label>
+            <label><input type="radio" name="q6" value="B"> B) 1/2</label>
+            <label><input type="radio" name="q6" value="C"> C) 2/3</label>
+            <label><input type="radio" name="q6" value="D"> D) 3/4</label>
+            <div id="feedback6" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>7. A box has 10 balls numbered 1-10. What is the probability of picking a number divisible by 3?</h3>
+            <label><input type="radio" name="q7" value="A"> A) 3/10</label>
+            <label><input type="radio" name="q7" value="B"> B) 1/3</label>
+            <label><input type="radio" name="q7" value="C"> C) 2/5</label>
+            <label><input type="radio" name="q7" value="D"> D) 1/2</label>
+            <div id="feedback7" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>8. A card is drawn from a deck. What is the probability of getting a red card (hearts or diamonds)?</h3>
+            <label><input type="radio" name="q8" value="A"> A) 1/2</label>
+            <label><input type="radio" name="q8" value="B"> B) 1/4</label>
+            <label><input type="radio" name="q8" value="C"> C) 3/4</label>
+            <label><input type="radio" name="q8" value="D"> D) 2/3</label>
+            <div id="feedback8" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>9. A bag contains 4 red, 5 blue, and 1 green ball. What is the probability of not picking a red ball?</h3>
+            <label><input type="radio" name="q9" value="A"> A) 1/4</label>
+            <label><input type="radio" name="q9" value="B"> B) 1/2</label>
+            <label><input type="radio" name="q9" value="C"> C) 2/5</label>
+            <label><input type="radio" name="q9" value="D"> D) 3/5</label>
+            <div id="feedback9" class="feedback"></div>
+          </div>
+
+          <div class="question">
+            <h3>10. A die is rolled twice. What is the probability of getting a double (same number both times)?</h3>
+            <label><input type="radio" name="q10" value="A"> A) 1/6</label>
+            <label><input type="radio" name="q10" value="B"> B) 1/12</label>
+            <label><input type="radio" name="q10" value="C"> C) 1/3</label>
+            <label><input type="radio" name="q10" value="D"> D) 1/4</label>
+            <div id="feedback10" class="feedback"></div>
+          </div>
+
+          
+            <button type="submit">Submit Answers</button>
+        <form>
+        <div id="result"></div>
+        <section>
+      </div>
+
+    <div class="footer">Footer</div>
+  </div>
+
+
+<script>
+
+document.addEventListener('click', function(e) {
+ const btn = e.target.closest('.dropbtn');
+  if (btn) {
+    const dropdown = btn.parentElement;
+    const expanded = dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    return;
+ }
+      
+ document.querySelectorAll('.dropdown.open').forEach(dd => {
+   dd.classList.remove('open');
+   const b = dd.querySelector('.dropbtn');
+   if (b) b.setAttribute('aria-expanded', 'false');
+    });
+});
+
+
+document.getElementById("quizForm").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const answers = {
+      q1: "C",
+      q2: "B",
+      q3: "D",
+      q4: "A",
+      q5: "D",
+      q6: "B",
+      q7: "C",
+      q8: "A",
+      q9: "D",
+      q10: "A"
+    };
+
+    let score = 0;
+    let total = 10;
+
+    function setFeedback(id, correct, message) {
+      const el = document.getElementById(id);
+      el.textContent = message;
+      el.className = "feedback " + (correct ? "correct" : "incorrect");
+      if (correct) score++; 
+        
+}
+
+     ['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'].forEach(name => {
+        const selected = document.querySelector(`input[name="${name}"]:checked`);
+        const feedbackId = "feedback" + name.slice(1);
+        if (!selected) {
+            setFeedback(feedbackId, false, "Please select an answer.");
+        } else if (selected.value === answers[name]) {
+            setFeedback(feedbackId, true, "Correct!");
+        } else {
+            setFeedback(feedbackId, false, "Incorrect.");
+        }
+    });
+
+    const q4 = document.getElementById("q4").value.trim().toLowerCase();
+    if (q4 === "") {
+        setFeedback("feedback4", false, "Please fill in the blank.");
+    } else if (q4.includes(answers.q4)) {
+        setFeedback("feedback4", true, "Correct!");
+    } else {
+        setFeedback("feedback4", false, "Incorrect. Hint: Think about divisibility related to the coefficients.");
+    }
+
+    const q5 = document.getElementById("q5").value.trim();
+    if (q5 === "") {
+        setFeedback("feedback5", false, "Please enter your answer.");
+    } else if (q5 === answers.q5) {
+        setFeedback("feedback5", true, "Correct!");
+    } else {
+        setFeedback("feedback5", false, "Incorrect.");
+    }
+
+    const q8raw = document.getElementById("q8").value.trim();
+    if (q8raw === "") {
+        setFeedback("feedback8", false, "Please enter a solution.");
+    } else {
+        const m = q8raw.match(/-?\d+/g);
+        if (!m || m.length < 2) {
+            setFeedback("feedback8", false, "Please enter two integers, e.g. (2,1) or 2,1.");
+        } else {
+            const x = parseInt(m[0], 10);
+            const y = parseInt(m[1], 10);
+            if (4*x + 6*y === 14) {
+                setFeedback("feedback8", true, `Correct! (${x}, ${y}) is a solution.`);
+            } else {
+                setFeedback("feedback8", false, `Incorrect. (${x}, ${y}) does not satisfy 4x + 6y = 14.`);
+            }
+        }
+    }
+
+    const q9 = document.getElementById("q9").value.trim();
+    if (q9 === "") {
+        setFeedback("feedback9", false, "Please enter your answer.");
+    } else if (q9 === answers.q9) {
+        setFeedback("feedback9", true, "Correct!");
+    } else {
+        setFeedback("feedback9", false, "Incorrect.");
+    }
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.textContent = `Your score: ${score} out of ${total}.`;
+    if (score === total) {
+    resultDiv.style.color = "green";
+    resultDiv.textContent += " Excellent! You know your Probability equations well.";
+    } else if (score >= total / 2) {
+    resultDiv.style.color = "orange";
+    resultDiv.textContent += " Good job! Keep practicing.";
+    } else {
+    resultDiv.style.color = "red";
+    resultDiv.textContent += " Keep studying! Probability equations can be tricky.";
+    }
+});
+
+/* Disable radio inputs after selection (as you had) */
+document.querySelectorAll('input[type="radio"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const name = this.name;
+        document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.disabled = true);
+    });
+});
+
+/* Disable text and number inputs after first answer (on blur) */
+['q1','q2','q3','q4','q5','q6','q7','q8','q9','q10'].forEach(id => {
+    const input = document.getElementById(id);
+    if (input) {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() !== '') {
+                this.disabled = true;
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>
