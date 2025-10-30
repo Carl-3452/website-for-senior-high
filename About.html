@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Senior High School Mathematics</title>
+ 
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <h2>MathMastersDHS.com</h2>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+
+        <div class="dropdown">
+          <button class="dropbtn" aria-haspopup="true" aria-expanded="false">
+            Quiz-Section <i class="fa fa-caret-down" aria-hidden="true"></i>
+          </button>
+          <div class="dropdown-content" role="menu" aria-label="Quiz sections">
+            <a href="Measurement & Geometry.html">Measurement &amp; Geometry</a>
+            <a href="Probability.html">Probability</a>
+            <a href="diophantine.html">Diophantine</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <header class="heading_1">
+      <h1>Senior High School Mathematics</h1>
+      <p>Year 11-12 | Measurements &amp; Geometry, Probability, and Diophantine Equations</p>
+    </header>
+
+    <main class="text_1">
+      <section>
+        <h2>About Our Senior High School Mathematics Program</h2>
+        <p>
+          Welcome to the Senior High School Mathematics Department! Our Year 11 and 12 program is designed
+          to help students build a strong foundation in advanced mathematical concepts while developing
+          critical thinking, logical reasoning, and problem-solving skills.
+        </p>
+
+        <h3><span class="emoji">📏</span> Measurement &amp; Geometry</h3>
+        <p>
+          Students deepen their understanding of shapes, space, and measurement by applying geometric
+          reasoning to real-world contexts. Topics include trigonometry, area and volume calculations,
+          and the relationships between two- and three-dimensional figures.
+        </p>
+
+        <h3><span class="emoji">🎲</span> Probability</h3>
+        <p>
+          This area introduces students to the mathematics of uncertainty. Learners explore how to
+          calculate the likelihood of events, interpret data, and make informed decisions based on
+          statistical reasoning.
+        </p>
+
+        <h3><span class="emoji">🔢</span> Diophantine Equations</h3>
+        <p>
+          Students tackle number theory problems involving whole-number solutions, exploring patterns,
+          relationships, and the beauty of mathematical structure.
+        </p>
+
+        <p>
+          Our goal is to make mathematics engaging, meaningful, and relevant — preparing students for
+          future studies, careers in STEM, and everyday problem solving.
+        </p>
+      </section>
+    </main>
+
+    
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>About Us</h3>
+          <p>We're passionate about creating modern, responsive websites that inspire and inform.</p>
+        </div>
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Senior High School Mathematics Department | All Rights Reserved</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+ 
+    document.addEventListener('click', function(e) {
+      const btn = e.target.closest('.dropbtn');
+      if (btn) {
+        const dropdown = btn.parentElement;
+        const expanded = dropdown.classList.toggle('open');
+        btn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+        return;
+      }
+      document.querySelectorAll('.dropdown.open').forEach(dd => {
+        dd.classList.remove('open');
+        const b = dd.querySelector('.dropbtn');
+        if (b) b.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
