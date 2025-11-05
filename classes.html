@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses — Math Lessons</title>
+  <link rel="stylesheet" href="Main.css">
+  <link rel="stylesheet" href="Courses.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Courses.html" class="active">Courses</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Math Lessons</h1>
+    <div class="topics">
+      <button class="tablink" data-target="geometry" onclick="openLesson('geometry')">Measurement &amp; Geometry</button>
+      <button class="tablink" data-target="diophantine" onclick="openLesson('diophantine')">Diophantine Equations</button>
+      <button class="tablink" data-target="probability" onclick="openLesson('probability')">Probability</button>
+    </div>
+    <!-- GEOMETRY SECTION -->
+    <section id="geometry" class="lesson-content">
+      <h2>Measurement &amp; Geometry</h2>
+      <p>Learn about shapes, area, volume, and geometric formulas.</p>
+      <div class="video-wrap">
+        <iframe src="images/lv_0_20251104235542.mp4" title="Geometry Tutorial" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <form id="geometryQuiz" class="quiz">
+        <label>1) Area of a rectangle with sides 4 and 7 is: <br>
+          <input type="radio" name="gq1" value="24"> 24
+          <input type="radio" name="gq1" value="28"> 28
+          <input type="radio" name="gq1" value="11"> 11
+        </label>
+        <button type="submit">Submit</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </section>
+    <!-- DIOPHANTINE SECTION -->
+    <section id="diophantine" class="lesson-content" style="display:none;">
+      <h2>Diophantine Equations</h2>
+      <p>Equations where only integer solutions are sought.</p>
+      <div class="video-wrap">
+        <iframe src="images/lv_0_20251104235721.mp4" title="Diophantine Tutorial" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <form id="diophantineQuiz" class="quiz">
+        <label>1) The equation 2x + 3y = 7 has integer solution x=1, y= ? <br>
+          <input type="text" name="dq1" placeholder="answer">
+        </label>
+        <button type="submit">Submit</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </section>
+    <!-- PROBABILITY SECTION -->
+    <section id="probability" class="lesson-content" style="display:none;">
+      <h2>Probability</h2>
+      <p>Understand likelihood, outcomes, and basic probability formulas.</p>
+      <div class="video-wrap">
+        <iframe src="images/lv_0_20251104235853.mp4" title="Probability Tutorial" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <form id="probabilityQuiz" class="quiz">
+        <label>1) What is the probability of rolling a 4 on a fair six-sided die? <br>
+          <input type="radio" name="pq1" value="1/6"> 1/6
+          <input type="radio" name="pq1" value="1/3"> 1/3
+        </label>
+        <button type="submit">Submit</button>
+        <div class="result" aria-live="polite"></div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer (consistent with About.html) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>About Us</h3>
+        <p>We're passionate about creating modern, responsive websites that inspire and inform.</p>
+      </div>
+
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 MathMastersDHS.com. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+function openLesson(id){
+  document.querySelectorAll('.lesson-content').forEach(el => el.style.display = (el.id === id) ? 'block' : 'none');
+  document.querySelectorAll('.tablink').forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-target') === id));
+  
+  // Pause all videos when switching lessons
+  document.querySelectorAll('.video-wrap video').forEach(video => {
+    video.pause();
+    video.currentTime = 0;
+  });
+}
+document.addEventListener('DOMContentLoaded', function(){
+  // open first tab
+  const first = document.querySelector('.tablink');
+  if(first) openLesson(first.getAttribute('data-target'));
+  document.querySelectorAll('.quiz').forEach(form => {
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      const result = this.querySelector('.result');
+      result.textContent = 'Answer received — review will be provided.';
+    });
+  });
+});
+</script>
+</body>
+</html>
